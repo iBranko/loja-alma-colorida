@@ -2,7 +2,7 @@
    CUSTOMIZAÇÕES - LOJA ALMA COLORIDA
    ========================================================================== */
 /* Aplicado apenas em telas médias/grandes (desktop e tablet) */
-@media (min-width:768px) {
+@media (min-width:769px) {
 	
 	/* --------------------------------------------------------------------------
 	   HEADER PRINCIPAL
@@ -13,6 +13,7 @@
 	/* Define o header como referência de posicionamento para elementos internos */
 	header.js-head-main {
 		position: relative;
+		padding-top: 100px !important;
 	}
 	
 	/* Permite que os itens do header quebrem em múltiplas linhas (essencial para 
@@ -75,10 +76,11 @@
 		content: "";
 		display: block;
 		width: 100%;
-		height: 1px;
-		background-color: #d4a5a5;       /* cor rosê */
+		height: 10px;
 		margin-bottom: 10px;
 		order: 1 !important;             /* entre logo (0) e menu (2) */
+		background-image: url("https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/boiserie.png");
+		background-position: center;
 	}
 	
 	/* Borda inferior (abaixo da linha do menu) */
@@ -86,10 +88,11 @@
 		content: "";
 		display: block;
 		width: 100%;
-		height: 1px;
-		background-color: #d4a5a5;       /* cor rosê */
+		height: 10px;
 		margin-top: 10px;
 		order: 5 !important;             /* última posição, após os ícones (4) */
+		background-image: url("https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/boiserie.png");
+		background-position: center;
 	}
 	
 	/* --------------------------------------------------------------------------
@@ -100,6 +103,15 @@
 	/* Aumenta o padding interno para deixar o campo mais confortável */
 	.header-logo-row .search-input {
 		padding: 8px 16px !important;
+	}
+
+	/* --------------------------------------------------------------------------
+	   TOLDO
+	   Ajuste tamanho do toldo
+	-------------------------------------------------------------------------- */
+	.js-head-main.head-main::before {
+		top: 0 !important;
+		height: 100px !important;
 	}
 
   /* --------------------------------------------------------------------------
@@ -124,13 +136,56 @@
   .services-col .service-image>*, .services-md-col .service-image>* {
     max-width: 64px !important;
   }
+
+  	/* --------------------------------------------------------------------------
+	   FLORES HEADER
+	   Inserção de flores decorativas no header, usando pseudo-elementos para posicionamento
+	-------------------------------------------------------------------------- */
+	.d-none.d-md-block.header-logo-row.header-style5::before {
+		content: "";
+		background-image: url("https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/flores-esquerda.png");
+		background-repeat: no-repeat;
+		position: absolute;
+		left: calc(( 105vw - 100% ) / -2);
+		top: 65px;
+		width: 260px;
+		height: 23vw;
+		background-position: left top;
+		background-size: contain;
+		z-index: 3;
+		pointer-events: none;
+	}
+	
+	.d-none.d-md-block.header-logo-row.header-style5::after {
+		content: "";
+		background-image: url("https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/flores-direita.png");
+		background-repeat: no-repeat;
+		position: absolute;
+		right: calc(( 103vw - 100% ) / -2);
+		top: 65px;
+		width: 260px;
+		height: 23vw;
+		background-position: right top;
+		background-size: contain;
+		z-index: 3;
+		pointer-events: none;
+	}
 } /* @media (min-width:768px) -- FIM */
 
+/* Aplicado apenas em telas extra grandes */
+@media (min-width:1440px) {
+
+	/* Ajuste tamanho das flores do lado direito */
+	.d-none.d-md-block.header-logo-row.header-style5::after {
+		height: 20vw;
+	}
+}
+
 /* --------------------------------------------------------------------------
-	   MEFAVORITA
-     Substitui o ícone de coração original do MeFavorita por um novo, usando 
-     máscara CSS para permitir controle total da cor via background-color (e efeitos de hover)
-	   -------------------------------------------------------------------------- */
+	MEFAVORITA
+	Substitui o ícone de coração original do MeFavorita por um novo, usando 
+	máscara CSS para permitir controle total da cor via background-color (e efeitos de hover)
+-------------------------------------------------------------------------- */
 /* Esconde o SVG original do MeFavorita */
 .utilities-container div.MF_header svg {
   display: none !important;
@@ -224,10 +279,10 @@ div#MF_product_save:hover {
 }
 
 /* --------------------------------------------------------------------------
-	   FOOTER - DESTAQUE NO ITEM "BLOG"
-	   Deixa o último item da primeira coluna do footer (Blog) em negrito
-	   e com cor rosê mais escura para destaque
-	   -------------------------------------------------------------------------- */
+	FOOTER - DESTAQUE NO ITEM "BLOG"
+	Deixa o último item da primeira coluna do footer (Blog) em negrito
+	e com cor rosê mais escura para destaque
+-------------------------------------------------------------------------- */
 	
 .col-12.col-md-auto:first-child .footer-menu li:last-child .footer-menu-link {
   font-weight: bold;
@@ -236,3 +291,75 @@ div#MF_product_save:hover {
 .col-12.col-md-auto:first-child .footer-menu li:last-child .footer-menu-link:hover {
   color: #F5A1AA;
 }
+
+/* --------------------------------------------------------------------------
+	HEADER - TOLDO
+	Insere um toldo decorativo no header, usando pseudo-elemento para posicionamento
+-------------------------------------------------------------------------- */
+
+.js-head-main.head-main {
+	padding-top: 55px;
+}
+
+.js-head-main.head-main::before {
+	content: "";
+	background-image: url("https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/Toldo.png");
+	background-repeat: repeat-x;
+	position: absolute;
+	top: 27px;
+	left: 0;
+	width: 100%;
+	height: 75px;
+	background-position: center;
+	background-size: auto 100%;
+	z-index: 5;
+	pointer-events: none;
+}
+
+/* Adiciona sombra ao toldo */
+.js-head-main.head-main::after {
+	content: "";
+	position: absolute;
+	top: 80px;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	z-index: 4;
+	pointer-events: none;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, .18), rgba(0, 0, 0, 0));
+}
+
+/* Ajusta toldo em header fixo*/
+.js-head-fixed.header-fixed {
+	padding-top: 15px;
+}
+
+.js-head-fixed.header-fixed::before {
+	content: "";
+	background-image: url("https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/ponta-toldo.png");
+	background-repeat: repeat-x;
+	position: absolute;
+	top: -75px;
+	left: 0;
+	width: 100%;
+	height: 105px;
+	background-position: center;
+	background-size: auto 100%;
+	z-index: 5;
+	pointer-events: none;
+}
+
+/* Ajusta sombra do toldo em header fixo */
+.js-head-fixed.header-fixed::after {
+	content: "";
+	position: absolute;
+	top: 20px;
+	left: 0;
+	width: 100%;
+	height: 10px;
+	z-index: 4;
+	pointer-events: none;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, .18), rgba(0, 0, 0, 0));
+}
+
+	
