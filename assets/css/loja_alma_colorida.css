@@ -13,7 +13,8 @@
 	/* Define o header como referência de posicionamento para elementos internos */
 	header.js-head-main {
 		position: relative;
-		padding-top: 100px !important;
+		padding-top: 95px !important;
+		margin-bottom: 10px !important;
 	}
 	
 	/* Permite que os itens do header quebrem em múltiplas linhas (essencial para 
@@ -98,7 +99,7 @@
 		background-image: url("https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/assets/images/boiserie.png");
 		background-position: center;
 		position: absolute;
-        bottom: 5px;
+        bottom: 0;
         left: 0;
 	}
 	
@@ -369,4 +370,19 @@ div#MF_product_save:hover {
 	background: linear-gradient(to bottom, rgba(0, 0, 0, .18), rgba(0, 0, 0, 0));
 }
 
+/* --------------------------------------------------------------------------
+	SEÇÃO DE BANNERS INFORMATIVOS
+	Adiciona um fundo rosê degradê suave para destacar a seção de diferenciais
+-------------------------------------------------------------------------- */
+.section-informative-banners {
+background: linear-gradient(to bottom, #fbf6f705, #d97c870d, #ffffff);
+}
+
+.services-row .service-item {
+	border-right: solid 1px #f5a1aa;
+}
+
+.services-row .service-item:last-child {
+	border-right: none !important;
+}
 	
