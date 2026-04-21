@@ -21,6 +21,7 @@
 	.js-head-main .header-logo-row .js-head-logo {
 		flex-wrap: wrap !important;
 		align-items: center !important;
+		padding-bottom: 15px !important;
 	}
 	
 	/* LINHA 1: Logo centralizada ocupando toda a largura disponível */
@@ -81,6 +82,9 @@
 		order: 1 !important;             /* entre logo (0) e menu (2) */
 		background-image: url("https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/assets/images/boiserie.png");
 		background-position: center;
+		position: absolute;
+        bottom: 65px;
+        left: 0;
 	}
 	
 	/* Borda inferior (abaixo da linha do menu) */
@@ -93,6 +97,9 @@
 		order: 5 !important;             /* última posição, após os ícones (4) */
 		background-image: url("https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/assets/images/boiserie.png");
 		background-position: center;
+		position: absolute;
+        bottom: 5px;
+        left: 0;
 	}
 	
 	/* --------------------------------------------------------------------------
