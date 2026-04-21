@@ -303,7 +303,7 @@ div#MF_product_save:hover {
 
 .js-head-main.head-main::before {
 	content: "";
-	background-image: url("https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/assets/images/Toldo.png");
+	background-image: url("https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/assets/images/toldo.png");
 	background-repeat: repeat-x;
 	position: absolute;
 	top: 27px;
