@@ -9,6 +9,11 @@
 	   Transforma o layout de 1 linha (logo + menu + busca + ícones)
 	   em 2 linhas: logo centralizada em cima, menu + busca + ícones embaixo
 	   -------------------------------------------------------------------------- */
+
+	/* Tamanho da logo */
+	.logo-img {
+		max-height: 115px;
+	}
 	
 	/* Define o header como referência de posicionamento para elementos internos */
 	header.js-head-main {
@@ -81,7 +86,7 @@
 		height: 10px;
 		margin-bottom: 10px;
 		order: 1 !important;             /* entre logo (0) e menu (2) */
-		background-image: url("https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/assets/images/boiserie.png");
+		background-image: url("https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/boiserie.png");
 		background-position: center;
 		position: absolute;
         bottom: 65px;
@@ -96,7 +101,7 @@
 		height: 10px;
 		margin-top: 10px;
 		order: 5 !important;             /* última posição, após os ícones (4) */
-		background-image: url("https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/assets/images/boiserie.png");
+		background-image: url("https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/boiserie.png");
 		background-position: center;
 		position: absolute;
         bottom: 0;
@@ -151,7 +156,7 @@
 	-------------------------------------------------------------------------- */
 	.d-none.d-md-block.header-logo-row.header-style5::before {
 		content: "";
-		background-image: url("https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/assets/images/flores-esquerda.png");
+		background-image: url("https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/flores-esquerda.png");
 		background-repeat: no-repeat;
 		position: absolute;
 		left: calc(( 105vw - 100% ) / -2);
@@ -166,7 +171,7 @@
 	
 	.d-none.d-md-block.header-logo-row.header-style5::after {
 		content: "";
-		background-image: url("https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/assets/images/flores-direita.png");
+		background-image: url("https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/flores-direita.png");
 		background-repeat: no-repeat;
 		position: absolute;
 		right: calc(( 103vw - 100% ) / -2);
@@ -335,7 +340,7 @@ div#MF_product_save:hover {
 
 .js-head-main.head-main::before {
 	content: "";
-	background-image: url("https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/assets/images/toldo.png");
+	background-image: url("https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/Toldo.png");
 	background-repeat: repeat-x;
 	position: absolute;
 	top: 27px;
@@ -368,7 +373,7 @@ div#MF_product_save:hover {
 
 .js-head-fixed.header-fixed::before {
 	content: "";
-	background-image: url("https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/assets/images/ponta-toldo.png");
+	background-image: url("https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/ponta-toldo.png");
 	background-repeat: repeat-x;
 	position: absolute;
 	top: -75px;
