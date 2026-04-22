@@ -194,32 +194,30 @@
 	}
 
 	/* Aplicado rosas banner */
-	.section-informative-banners::before {
-		content: "";
-		background-image: url(https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/assets/images/rosas-banner.png);
+	.section-informative-banners::before, .section-informative-banners::after {
 		position: absolute;
-		height: 100px;
-		width: 100px;
+		top: 0;
+		height: 15vw;
+		width: 15vw;
+		max-width: 180px;
+		max-height: 180px;
+		min-width: 80px;
+		min-height: 80px;
 		background-position: center;
 		background-size: 100%;
-		rotate: none;
-		transform: rotate(100deg);
-		left: -30px;
-		top: 0;
+		content: "";
+	}
+
+	.section-informative-banners::before {
+		left: -4vw;
+		transform: rotate(75deg);
+		background-image: url(https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/assets/images/rosas-banner.png);
 	}
 
 	.section-informative-banners::after {
-		content: "";
+		right: -4vw;
+		transform: rotate(-100deg);
 		background-image: url(https://raw.githubusercontent.com/iBranko/loja-alma-colorida/main/assets/images/rosas-banner.png);
-		position: absolute;
-		height: 100px;
-		width: 100px;
-		background-position: center;
-		background-size: 100%;
-		rotate: none;
-		transform: rotate(-70deg);
-		right: -30px;
-		bottom: 0;
 	}
 
 } /* @media (min-width:768px) -- FIM */
