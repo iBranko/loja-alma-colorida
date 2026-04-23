@@ -455,6 +455,10 @@ body.produto-revenda form.product-form div.js-product-variants > div.col {
 footer div.powered-by-logo {
   display: none;
 }
+/* Remove o telefone de contato do footer */
+footer ul li.contact-item:nth-of-type(2) {
+  display: none;
+}
 
 /* Alinha a logo horizontalmente no mobile */
 @media (max-width:768px) {
