@@ -11,7 +11,7 @@
 	   -------------------------------------------------------------------------- */
 
 	/* Tamanho da logo */
-	.logo-img {
+	header img.logo-img {
 		max-height: 115px;
 	}
 	
@@ -134,7 +134,7 @@
   .utilities-container svg {
     transition: all .4s ease;
   }
-  .utilities-container svg.icon-inline:hover {
+  .utilities-container .utilities-item:hover svg.icon-inline {
     fill: #F5A1AA;
   }
   /* Espaçamento entre ícones */
@@ -286,7 +286,8 @@
   margin-left: 0;
 }
 /* Padroniza o tamanho da badge com a badge da sacola */
-span#MF_header_badge {
+span#MF_header_badge,
+span#MF_header_badge_mobile {
   width: 20px;
   height: 20px;
   font-size: 12px;
@@ -328,6 +329,7 @@ div#MF_product_save:hover {
 /* Ajusta a posição da badge da sacola */
 .cart-widget-amount {
   top: 2px;
+  border: 1px solid #fff !important;	
 }
 
 /* --------------------------------------------------------------------------
@@ -349,11 +351,11 @@ div#MF_product_save:hover {
 	e com cor rosê mais escura para destaque
 -------------------------------------------------------------------------- */
 	
-.col-12.col-md-auto:first-child .footer-menu li:last-child .footer-menu-link {
+footer a[href="/blog/"] {
   font-weight: bold;
   color: #d97c87;
 }
-.col-12.col-md-auto:first-child .footer-menu li:last-child .footer-menu-link:hover {
+footer a[href="/blog/"]:hover {
   color: #F5A1AA;
 }
 
@@ -435,4 +437,28 @@ div#MF_product_save:hover {
 	background: linear-gradient(to bottom, rgba(251, 246, 247, .02), rgba(217, 124, 135, .05), #fff);
 	position: relative;
 }
-	
+
+/* --------------------------------------------------------------------------
+	REMOÇÃO DE GUIA DE MEDIDAS PARA PRODUTOS DE REVENDA
+	Remove o botão de Guia de Medidas para produtos com a tag revenda
+    (Funcionalidade através de script no Google Tag Manager)
+-------------------------------------------------------------------------- */
+body.produto-revenda form.product-form div.js-product-variants > div.col {
+    display: none;
+}
+
+/* --------------------------------------------------------------------------
+	MISC
+	Coisas menores
+-------------------------------------------------------------------------- */
+/* Remove logo da nuvemshop no footer */
+footer div.powered-by-logo {
+  display: none;
+}
+
+/* Alinha a logo horizontalmente no mobile */
+@media (max-width:768px) {
+	header img.logo-img {
+		margin-right: -24px;
+	}
+}
